@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: #030B30;
+  color: #fff;
+  font-family: 'Poppins', 'Orbitron', sans-serif;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030B30;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #32E0D1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2BC4B8;
+}
+
+/* Techy glowing accent effect */
+.glow-accent {
+  text-shadow: 0 0 8px #32E0D1, 0 0 16px #32E0D1;
+}
+
+/* Enhanced gradient backgrounds */
+.bg-tech-gradient {
+  background: linear-gradient(135deg, #030B30 0%, #32E0D1 50%, #030B30 100%);
+}
+
+.bg-cyber-gradient {
+  background: linear-gradient(45deg, #030B30 0%, #1a1a2e 25%, #32E0D1 50%, #1a1a2e 75%, #030B30 100%);
+}
+
+/* Glowing border effect */
+.glow-border {
+  box-shadow: 0 0 20px rgba(50, 224, 209, 0.3);
+}
+
+/* Animated background */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background: linear-gradient(-45deg, #030B30, #1a1a2e, #32E0D1, #030B30);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse glow effect */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(50, 224, 209, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(50, 224, 209, 0.8), 0 0 30px rgba(50, 224, 209, 0.6); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Text reveal animation */
+@keyframes text-reveal {
+  0% { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+.text-reveal {
+  animation: text-reveal 1s ease-out forwards;
+}
+
+/* Smooth transitions for interactive elements only */
+button, a, input, textarea, .transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #32E0D1;
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background: rgba(50, 224, 209, 0.3);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: rgba(50, 224, 209, 0.3);
+  color: #fff;
+}
+
+/* Ensure proper centering for all sections */
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container centering */
+.container-center {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
